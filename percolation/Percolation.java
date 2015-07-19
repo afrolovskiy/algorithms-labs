@@ -46,7 +46,9 @@ public class Percolation {
  
         if (i == 1) {
             uf.union(idx, virtTopSite);
-        } else if (i == size) {
+        }
+
+        if (i == size) {
             uf.union(idx, virtBottomSite);
         }
         
