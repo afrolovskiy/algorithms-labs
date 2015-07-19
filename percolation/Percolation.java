@@ -10,7 +10,7 @@ public class Percolation {
         }
 
         size = N;
- 
+
         // all sites blocked by default
         opennedSites = new boolean[size][size];
         for (int i = 0; i < size; i++) {
@@ -18,7 +18,7 @@ public class Percolation {
                 opennedSites[i][j] = false;
             }
         }
-        
+
         int siteCount = size * size;
         uf = new WeightedQuickUnionUF(siteCount + 2);  // + 2 virtial sites
         virtTopSite = siteCount;
@@ -28,7 +28,7 @@ public class Percolation {
     private int getLinearIndex(int i, int j) {
         return (i - 1) * size + j - 1;
     };
-    
+
     private void validate(int i) {
         if (i < 1 || i > size) {
             throw new IndexOutOfBoundsException();
