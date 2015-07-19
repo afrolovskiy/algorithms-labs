@@ -60,8 +60,8 @@ public class PercolationStats {
             throw new IllegalArgumentException();
         }
 
-        int N = Integer.valueOf(args[0]);
-        int T = Integer.valueOf(args[1]);
+        int N = Integer.parseInt(args[0]);
+        int T = Integer.parseInt(args[1]);
 
         PercolationStats ps = new PercolationStats(N, T);
 

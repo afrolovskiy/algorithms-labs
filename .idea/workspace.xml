@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a84af08e-b543-439f-a7d6-327e40f5192f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/percolation/PercolationVisualizer.java" afterPath="$PROJECT_DIR$/percolation/PercolationVisualizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/percolation/PercolationStats.java" afterPath="$PROJECT_DIR$/percolation/PercolationStats.java" />
     </list>
     <ignored path="algorithms-labs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PercolationVisualizer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/percolation/PercolationVisualizer.java">
+      <file leaf-file-name="PercolationStats.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47586206">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6896552">
+              <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,8 +48,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/percolation/Percolation.java" />
-        <option value="$PROJECT_DIR$/percolation/PercolationStats.java" />
         <option value="$PROJECT_DIR$/percolation/PercolationVisualizer.java" />
+        <option value="$PROJECT_DIR$/percolation/PercolationStats.java" />
       </list>
     </option>
   </component>
@@ -385,14 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6689655">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/percolation/Percolation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66206896">
@@ -410,11 +399,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/percolation/PercolationVisualizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47586206">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.66206896">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6896552">
+          <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
