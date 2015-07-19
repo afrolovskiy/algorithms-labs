@@ -1,7 +1,7 @@
 public class Percolation {
     private int size;
     private boolean[][] opennedSites;
-    private WeightedQuickUnionUF uf;
+    private WeightedQuickUnionUF uf, uf2;
     private int virtTopSite, virtBottomSite;
 
     public Percolation(int N) {
@@ -23,6 +23,8 @@ public class Percolation {
         uf = new WeightedQuickUnionUF(siteCount + 2);  // + 2 virtial sites
         virtTopSite = siteCount;
         virtBottomSite = siteCount + 1;
+
+        uf2 = new WeightedQuickUnionUF(siteCount + 1);  // + 1 virtial sites
     };
 
     private int getLinearIndex(int i, int j) {
@@ -46,6 +48,7 @@ public class Percolation {
  
         if (i == 1) {
             uf.union(idx, virtTopSite);
+            uf2.union(idx, virtTopSite);
         }
 
         if (i == size) {
@@ -54,21 +57,25 @@ public class Percolation {
         
         if (i > 1 && isOpen(i - 1, j)) {
             uf.union(getLinearIndex(i - 1, j), idx);
+            uf2.union(getLinearIndex(i - 1, j), idx);
         }
         
         if (i < size && isOpen(i + 1, j)) {
             uf.union(getLinearIndex(i + 1, j), idx);
+            uf2.union(getLinearIndex(i + 1, j), idx);
         }
         
         if (j > 1 && isOpen(i, j - 1)) {
             uf.union(getLinearIndex(i, j - 1), idx);
+            uf2.union(getLinearIndex(i, j - 1), idx);
         }
         
         if (j < size && isOpen(i, j + 1)) {
             uf.union(getLinearIndex(i, j + 1), idx);
+            uf2.union(getLinearIndex(i, j + 1), idx);
         }
     }
- 
+
     public boolean isOpen(int i, int j) {
         validate(i);
         validate(j);
@@ -76,7 +83,7 @@ public class Percolation {
     }
 
     public boolean isFull(int i, int j) {
-        return isOpen(i, j) && uf.connected(getLinearIndex(i, j), virtTopSite);
+        return isOpen(i, j) && uf2.connected(getLinearIndex(i, j), virtTopSite);
     }
 
     public boolean percolates() {
