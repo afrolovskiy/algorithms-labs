@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a84af08e-b543-439f-a7d6-327e40f5192f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/percolation/PercolationStats.java" afterPath="$PROJECT_DIR$/percolation/PercolationStats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/percolation/PercolationVisualizer.java" afterPath="$PROJECT_DIR$/percolation/PercolationVisualizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="algorithms-labs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,29 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Percolation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/percolation/Percolation.java">
+      <file leaf-file-name="PercolationVisualizer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/percolation/PercolationVisualizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.47586206">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#1934#1935#0" expanded="true" />
-                <element signature="e#2020#2021#0" expanded="true" />
-                <element signature="e#2055#2056#0" expanded="true" />
-                <element signature="e#2119#2120#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PercolationStats.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6689655">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,6 +52,7 @@
       <list>
         <option value="$PROJECT_DIR$/percolation/Percolation.java" />
         <option value="$PROJECT_DIR$/percolation/PercolationStats.java" />
+        <option value="$PROJECT_DIR$/percolation/PercolationVisualizer.java" />
       </list>
     </option>
   </component>
@@ -148,6 +135,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/percolation/files" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -367,9 +359,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/percolation/Percolation.java">
+    <entry file="file://$PROJECT_DIR$/percolation/files/jerry47.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/files/CREDITS">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/files/sedgewick60.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/InteractivePercolationVisualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689655">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/percolation/Percolation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66206896">
           <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
             <element signature="e#786#787#0" expanded="true" />
@@ -382,11 +408,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/percolation/PercolationStats.java">
+    <entry file="file://$PROJECT_DIR$/percolation/PercolationVisualizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6689655">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.47586206">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
