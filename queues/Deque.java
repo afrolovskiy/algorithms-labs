@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
     private Node first = null;
@@ -103,13 +104,15 @@ public class Deque<Item> implements Iterable<Item> {
 
     private void validateSize() {
         if (isEmpty()) {
-            throw new java.util.NoSuchElementException();
+            throw new NoSuchElementException();
         }
     }
 
     private class DequeIterator implements Iterator<Item> {
+        private Node current = first;
+
         public boolean hasNext() {
-            return !isEmpty();
+            return (current != null);
         }
 
         public void remove() {
@@ -117,7 +120,13 @@ public class Deque<Item> implements Iterable<Item> {
         }
 
         public Item next() {
-            return removeFirst();
+            if (first == null) {
+                throw new NoSuchElementException();
+            }
+
+            Node old = current;
+            current = current.next;
+            return old.item;
         }
     }
 
@@ -198,5 +207,20 @@ public class Deque<Item> implements Iterable<Item> {
 
         assert deque.removeLast() == 1;
         assert deque.size() == 0;
+
+        deque.addLast(1);
+        deque.addLast(2);
+        deque.addLast(3);
+        deque.addLast(4);
+        assert deque.size() == 4;
+
+        Iterator<Integer> iter = deque.iterator();
+        int iterated = 0;
+        while (iter.hasNext()) {
+            iter.next();
+            iterated++;
+        }
+        assert iterated == 4;
+        assert deque.size() == 4;
     }
 }
