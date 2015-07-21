@@ -129,49 +129,74 @@ public class Deque<Item> implements Iterable<Item> {
         Deque<Integer> deque = new Deque<Integer>();
 
         assert deque.isEmpty();
+        assert deque.size() == 0;
 
         deque.addFirst(1);
         assert !deque.isEmpty();
+        assert deque.size() == 1;
 
         assert deque.removeFirst() == 1;
         assert deque.isEmpty();
+        assert deque.size() == 0;
 
         deque.addFirst(2);
         assert !deque.isEmpty();
+        assert deque.size() == 1;
 
         assert deque.removeLast() == 2;
         assert deque.isEmpty();
+        assert deque.size() == 0;
 
         deque.addLast(3);
         assert !deque.isEmpty();
+        assert deque.size() == 1;
 
         assert deque.removeFirst() == 3;
         assert deque.isEmpty();
+        assert deque.size() == 0;
 
         deque.addLast(4);
         assert !deque.isEmpty();
+        assert deque.size() == 1;
 
         assert deque.removeLast() == 4;
         assert deque.isEmpty();
+        assert deque.size() == 0;
 
         deque.addFirst(2);
         deque.addFirst(1);
         deque.addLast(3);
         deque.addLast(4);
+        assert deque.size() == 4;
 
         assert deque.removeFirst() == 1;
+        assert deque.size() == 3;
+
         assert deque.removeFirst() == 2;
+        assert deque.size() == 2;
+
         assert deque.removeFirst() == 3;
+        assert deque.size() == 1;
+
         assert deque.removeFirst() == 4;
+        assert deque.size() == 0;
 
         deque.addLast(3);
         deque.addLast(4);
         deque.addFirst(2);
         deque.addFirst(1);
+        assert deque.size() == 4;
 
         assert deque.removeLast() == 4;
+        assert deque.size() == 3;
+
         assert deque.removeLast() == 3;
+        assert deque.size() == 2;
+
         assert deque.removeLast() == 2;
+        assert deque.size() == 1;
+
         assert deque.removeLast() == 1;
+        assert deque.size() == 0;
     }
 }
