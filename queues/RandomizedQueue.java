@@ -1,3 +1,4 @@
+import java.lang.Integer;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -88,6 +89,24 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
         public RandomizedQueueIterator() {
             items = (Item[]) new Object[size()];
+
+            // fill items
+            Node current = first;
+            int idx = 0;
+            while (current != null) {
+                items[idx] = current.item;
+                current = current.next;
+                idx++;
+            }
+
+            // shuffle items
+            for (int i = 0; i < size(); i++) {
+                int rndIdx = StdRandom.uniform(size());
+                Item tmp = items[i];
+                items[i] = items[rndIdx];
+                items[rndIdx] = tmp;
+
+            }
         }
 
         public boolean hasNext() {
@@ -113,5 +132,55 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return new RandomizedQueueIterator();
     }
 
-    public static void main(String[] args) { }
+    public static void main(String[] args) {
+        RandomizedQueue<Integer> queue = new RandomizedQueue<Integer>();
+
+        assert queue.isEmpty();
+        assert queue.size() == 0;
+
+        queue.enqueue(1);
+        assert !queue.isEmpty();
+        assert queue.size() == 1;
+
+        assert queue.sample() == 1;
+        assert !queue.isEmpty();
+        assert queue.size() == 1;
+
+        assert queue.dequeue() == 1;
+        assert queue.isEmpty();
+        assert queue.size() == 0;
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        assert !queue.isEmpty();
+        assert queue.size() == 2;
+
+        int sample = queue.sample();
+        assert (sample == 1) || (sample == 2);
+        assert !queue.isEmpty();
+        assert queue.size() == 2;
+
+        int item = queue.dequeue();
+        assert (item == 1) || (item == 2);
+        assert !queue.isEmpty();
+        assert queue.size() == 1;
+
+        item = queue.dequeue();
+        assert (item == 1) || (item == 2);
+        assert queue.isEmpty();
+        assert queue.size() == 0;
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        Iterator<Integer> iter = queue.iterator();
+        int iterated = 0;
+        while (iter.hasNext()) {
+            iter.next();
+            iterated++;
+        }
+        assert iterated == 2;
+        assert queue.size() == 2;
+
+        assert false;
+    }
 }
