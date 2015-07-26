@@ -1,4 +1,3 @@
-import java.lang.Integer;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

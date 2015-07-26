@@ -12,7 +12,7 @@ public class Subset {
         while (count < k && !StdIn.isEmpty()) {
             queue.enqueue(StdIn.readString());
             count++;
-        };
+        }
 
         Iterator<String> iter = queue.iterator();
         while (iter.hasNext()) {
