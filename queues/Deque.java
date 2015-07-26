@@ -120,7 +120,7 @@ public class Deque<Item> implements Iterable<Item> {
         }
 
         public Item next() {
-            if (first == null) {
+            if (current == null) {
                 throw new NoSuchElementException();
             }
 
