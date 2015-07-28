@@ -92,8 +92,49 @@ public class Point implements Comparable<Point> {
         return "(" + x + ", " + y + ")";
     }
 
-    // unit test
     public static void main(String[] args) {
-        /* YOUR CODE HERE */
+        Point p0, p1, p2;
+
+        // compareTo tests
+        // only different y coordinates
+        p0 = new Point(0, 0);
+        p1 = new Point(0, 10);
+        assert p0.compareTo(p1) < 0;
+        assert p1.compareTo(p0) > 0;
+
+        // only different x coordinates
+        p0 = new Point(0, 0);
+        p1 = new Point(10, 0);
+        assert p0.compareTo(p1) < 0;
+        assert p1.compareTo(p0) > 0;
+
+        // same x and y coordinates
+        p0 = new Point(0, 0);
+        p1 = new Point(0, 0);
+        assert p0.compareTo(p1) == 0;
+        assert p1.compareTo(p0) == 0;
+
+        // slopeTo tests
+        // horizontal line
+        p0 = new Point(0, 0);
+        p1 = new Point(10, 0);
+        assert p0.slopeTo(p1) == 0;
+
+        // vertical line
+        p0 = new Point(0, 0);
+        p1 = new Point(0, 10);
+        assert p0.slopeTo(p1) == Double.POSITIVE_INFINITY;
+
+        // degenerate line
+        p0 = new Point(0, 0);
+        p1 = new Point(0, 0);
+        assert p0.slopeTo(p1) == Double.NEGATIVE_INFINITY;
+
+        // normal line
+        p0 = new Point(0, 0);
+        p1 = new Point(1, 1);
+        assert p0.slopeTo(p1) == 1.0;
+
+
     }
 }
