@@ -10,6 +10,7 @@
  *
  *************************************************************************/
 
+import java.lang.Double;
 import java.util.Comparator;
 
 public class Point implements Comparable<Point> {
@@ -33,9 +34,26 @@ public class Point implements Comparable<Point> {
         StdDraw.line(this.x, this.y, that.x, that.y);
     }
 
-    // slope between this point and that point
     public double slopeTo(Point that) {
-        /* YOUR CODE HERE */
+        int dx = that.x - this.x;
+        int dy = that.y - this.y;
+
+        if (dx == 0 && dy == 0) {
+            // degenerate line (between a point and itself)
+            return Double.NEGATIVE_INFINITY;
+        }
+
+        if (dy == 0) {
+            // horizontal line
+            return 0;
+        }
+
+        if (dx == 0) {
+            // vertical line
+            return  Double.POSITIVE_INFINITY;
+        }
+
+        return dy / (double) dx;
     }
 
     public int compareTo(Point that) {
