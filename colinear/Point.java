@@ -11,6 +11,7 @@
  *************************************************************************/
 
 import java.lang.Double;
+import java.util.Arrays;
 import java.util.Comparator;
 
 public class Point implements Comparable<Point> {
@@ -93,7 +94,7 @@ public class Point implements Comparable<Point> {
     }
 
     public static void main(String[] args) {
-        Point p0, p1, p2;
+        Point p0, p1;
 
         // compareTo tests
         // only different y coordinates
@@ -135,6 +136,17 @@ public class Point implements Comparable<Point> {
         p1 = new Point(1, 1);
         assert p0.slopeTo(p1) == 1.0;
 
+        // BySlope tests
+        Point[] points = new Point[4];
+        points[0] = new Point(0, 0);
+        points[1] = new Point(10, 0);
+        points[2] = new Point(0, 10);
+        points[3] = new Point(10, 10);
 
+        Arrays.sort(points, points[0].SLOPE_ORDER);
+        assert points[0].compareTo(new Point(0, 0)) == 0;
+        assert points[1].compareTo(new Point(10, 0)) == 0;
+        assert points[2].compareTo(new Point(10, 10)) == 0;
+        assert points[3].compareTo(new Point(0, 10)) == 0;
     }
 }
