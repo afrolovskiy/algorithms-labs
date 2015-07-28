@@ -14,7 +14,7 @@ import java.lang.Double;
 import java.util.Comparator;
 
 public class Point implements Comparable<Point> {
-    public final Comparator<Point> SLOPE_ORDER = BySlope();
+    public final Comparator<Point> SLOPE_ORDER = new BySlope();
 
     private final int x;
     private final int y;
