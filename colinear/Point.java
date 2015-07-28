@@ -14,9 +14,7 @@ import java.lang.Double;
 import java.util.Comparator;
 
 public class Point implements Comparable<Point> {
-
-    // compare points by slope
-    public final Comparator<Point> SLOPE_ORDER;       // YOUR DEFINITION HERE
+    public final Comparator<Point> SLOPE_ORDER = BySlope();
 
     private final int x;
     private final int y;
@@ -54,6 +52,23 @@ public class Point implements Comparable<Point> {
         }
 
         return dy / (double) dx;
+    }
+
+    private class BySlope implements Comparator<Point> {
+        public int compare(Point p1, Point p2) {
+            double slope1 = slopeTo(p1);
+            double slope2 = slopeTo(p2);
+
+            if (slope1 < slope2) {
+                return -1;
+            }
+
+            if (slope1 > slope2) {
+                return 1;
+            }
+
+            return 0;
+        }
     }
 
     public int compareTo(Point that) {
